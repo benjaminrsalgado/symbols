@@ -56,6 +56,20 @@ struct ContentView: View {
                     ProgressView()
                 }
                 .frame(width: 900, height: 230)
+                Image(systemName: "star.fill")
+                    .font(.system(size: 40))
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.orange)
+
+                AsyncImage(url: URL(string: "https://i8.amplience.net/i/naras/Taylor-Swift-Eras-Tour-Brazil-GettyImages-1801110030")) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                } placeholder: {
+                    ProgressView()
+                }
+                .frame(width: 900, height: 230)
             }
             .padding()
         }
